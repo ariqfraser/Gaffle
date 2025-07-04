@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+// Custom Theming for Angular Material
+// For more information: https://material.angular.dev/guide/theming
+@use "@angular/material" as mat;
+@use "globals" as *;
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Paytone+One&display=swap");
+
+html {
+    @include mat.theme(
+        (
+            color: (
+                theme-type: light,
+                primary: mat.$azure-palette,
+                tertiary: mat.$blue-palette,
+            ),
+            typography: "Outfit",
+            density: 0,
+        )
+    );
+} /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    background-color: $purple;
+    color: $white;
+}
